@@ -1,0 +1,126 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-start; /* Align items to the start (top) */
+  min-height: 100vh; /* Ensure full viewport height */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+h1,
+p {
+  text-align: center; /* Center heading and description */
+  margin-bottom: 1rem; /* Add some space below heading and description */
+  color: #555;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+#survey-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  width: 90%; /* Make form responsive */
+  max-width: 600px; /* Limit maximum width of form */
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: calc(100% - 20px); /* Subtract padding from 100% */
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select {
+  /* Add custom arrow styling for select dropdown */
+  -webkit-appearance: none; /* Override default appearance for Chrome, Safari */
+  -moz-appearance: none; /* Override default appearance for Firefox */
+  appearance: none; /* Override default appearance for other browsers */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4z'%3E%3C/path%3E%3C/svg%3E"); /* Add a down arrow icon */
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center; /* Position the arrow */
+  background-size: 0.6rem; /* Size of the arrow */
+  padding-right: 2rem; /* Make space for the arrow */
+}
+
+select:focus {
+  outline: none; /* Remove the default outline */
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1); /* Add a subtle shadow */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+  vertical-align: middle; /* Align radio/checkbox with label text */
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  width: 100%; /* Make button take full width */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #survey-form {
+    width: 95%;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea,
+  button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
